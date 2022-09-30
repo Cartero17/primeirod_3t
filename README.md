@@ -1,5 +1,5 @@
-# Terceiro Trimestre
-# Identificação:
+# primeirod_3t
+#Identificação:
 Felipe Medeiros Rocha - Nr. 06
-# Conteúdo:
-HTML, CSS e Javascript
+# Conteúdo
+HTML, CSS, Javascript
