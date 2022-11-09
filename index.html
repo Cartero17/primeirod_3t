@@ -2,29 +2,39 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jesus</title>
-  <script src="estudo.js"></script>
-  <link rel="stylesheet" href="geral.css">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Primeiro D  (Felipe)</title>
+   <script src="estudo.js"></script>
+   <link rel="stylesheet" href="geral.css">
 </head>
 
-<body> 
-  <div class="calculadora">
-    <div id="sptotal">
-      <span id="total">R$ 0,00</span>
-    </div>   
-    Capital: <input id="valor" type="text"><br>
-    Juros(mensais): <input id="juros" type="text"><br>
-    Nr de Meses: <input id="meses" type="text"><br>
-    <button onclick="calcula()">Enviar</button>
-    <div id="spListaMeses">
-      <span id="listaMeses"></span>
-    </div>
-  </div>
+<body>
+   <input type="checkbox" id="input-calcFin">
 
+   <div class="calc">
+      <div id="spTotal">
+         <span id="total">R$ 0,00</span>
+      </div>
+   Capital: <input id="valor" placeholder="R$ ??" type="text"> <br>
+      Juros Mensais: <input id="juros" placeholder="% ??" type="text"> <br>
+      Numero de Meses: <input id="meses" placeholder="tempo ??" type="text"> <br>
+      <button onclick="total()">Calcular</button>
+      <div id="spListaMes">
+         <span id="listaMes"></span>
+      </div>
+   </div>
 
+   <br><br><br>
+   <span id="resultado"></span><br><br>
+   valor 1: <input id="v1" type="text"><br>
+   valor 2: <input id="v2" type="text"><br>
+   <button onclick="adicao()">Soma</button>
+   <button onclick="subtracao()">Subtração</button>
+   <button onclick="divisao()">Divisão</button>
+   <button onclick="multiplicacao()">Multiplicação</button>
+   <button onclick="porcentagem()">Porcentagem</button>
 </body>
 
 </html>

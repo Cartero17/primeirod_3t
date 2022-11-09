@@ -1,100 +1,48 @@
-let tabuada = 1;
-let nome = "Antonio";
-
-function escreva() {
-    document.write("tabuada do " + tabuada + "<br>")
-    document.write(tabuada + " x 1 = " + (tabuada * 1) + "<br>");
-    document.write(tabuada + " x 2 = " + (tabuada * 2) + "<br>");
-    document.write(tabuada + " x 3 = " + (tabuada * 3) + "<br>");
-    document.write(tabuada + " x 4 = " + (tabuada * 4) + "<br>");
-    document.write(tabuada + " x 5 = " + (tabuada * 5) + "<br>");
-    document.write(tabuada + " x 6 = " + (tabuada * 6) + "<br>");
-    document.write(tabuada + " x 7 = " + (tabuada * 7) + "<br>");
-    document.write(tabuada + " x 8 = " + (tabuada * 8) + "<br>");
-    document.write(tabuada + " x 9 = " + (tabuada * 9) + "<br>");
-    document.write(tabuada + " x 10 = " + (tabuada * 10) + "<br><br>");
-    document.write("feito por " + nome);
+.calc {
+    background: rgb(100, 225, 100);
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 5px 6px black;
+}
+.calc input {
+    background: rgb(5, 58, 28);
+    color: cornsilk;
+    border-radius: 5px;
+    padding: 5px;
+}
+.calc input:focus {
+    background: rgb(255, 255, 255);
+    color: rgb(132, 0, 255);
+}
+#spTotal {
+    background: rgb(0, 0, 0);
+    color: rgb(115, 238, 0);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+.calc button {
+    background: rgb(25, 50, 25);
+    color: wheat ;
+    border-radius: 10px;
+    padding: 5px;
 }
 
-function minhaTabuada() {
-    for (let i = 1; i <= 10; i++) {
-        document.write("Tabuada do " + i + "<br>");
-        for (let j = 1; j <= 10; j++) {
-            document.write(i + " x " + j + " = " + (j * i) + "<br>");
-        }
-        document.write("<br>");
-    }
+.calc button:hover {
+    background: rgb(200, 100, 200);
+    color: rgb(0, 0, 0) ;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
 }
-
-function quadrado() {
-    for (let i = 1; i <= 499; i++) {
-        document.write("O quadrado de " + i + " é " + (i * i) + "<br>");
-    }
-}
-function moeda(atual) {
-    return atual.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
-
-}
-
-function calcula() {
-    let c = document.getElementById("valor").value;
-    let j = document.getElementById("juros").value;
-    let t = document.getElementById("meses").value;
-
-    if (!Number(c)) {
-        alert("o valor do capital deve ser numerico")
-        document.getElementById("valor").value = "";
-        document.getElementById("valor").focus();
-        return
-    }
-    if (!Number(j)) {
-        alert("O valor do juros deve ser numérico")
-        document.getElementById("juros").value = "";
-        document.getElementById("juros").focus();
-        return
-    }
-    if (!Number(t)) {
-        alert("A quantidade de meses deve ser numérico")
-        document.getElementById("meses").value = "";
-        document.getElementById("meses").focus();
-        return
-    }
-    let r = c;
-    let texto = "";
-    for(let m = 1; m <= t; m++){
-        r = c * (1 + (j / 100));
-        r = r;
-        texto += m + ": " + moeda(r)+"<br>"
-     //   document.write("Mês " + m + " - valor: " + moeda(r)+"<br>");
-    }
-    document.getElementById("listaMeses").innerHTML = texto;
-    document.getElementById("total").innerHTML = moeda(r);
-   // document.write("resultado: " + moeda(r));
-}
-
-let op = "";
-function operacao(ope) {
-    op = ope;
-}
-function calcule() {
-    let v1 = document.getElementById("v1").value;
-    let v2 = document.getElementById("v2").value;
-    let r = 0;
-
-    if (op == "+") {
-        r = Number(v1) + Number(v2);
-    }
-    if (op == "-") {
-        r = Number(v1) - Number(v2);
-    }
-    if (op == "*") {
-        r = Number(v1) * Number(v2);
-    }
-    if (op == "/") {
-        r = Number(v1) / Number(v2);
-    }
-
-
-    document.getElementById("resultado").innerHTML = r;
-
+#spListaMes {
+    text-align: start;
+    border-style: dotted;
+    border-color: aqua;
+    border-width: 1px;
+    border-radius: 4px;
+    background: rgb(0, 0, 0);
+    color: rgb(87, 247, 47);
 }
