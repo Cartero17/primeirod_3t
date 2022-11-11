@@ -1,5 +1,5 @@
 .calc {
-    background: rgb(100, 225, 100);
+    background: rgb(124, 112, 134);
     width: 200px;
     padding: 10px;
     border-radius: 10px;
@@ -7,7 +7,7 @@
     box-shadow: 5px 6px black;
 }
 .calc input {
-    background: rgb(5, 58, 28);
+    background: rgb(28, 5, 58);
     color: cornsilk;
     border-radius: 5px;
     padding: 5px;
@@ -24,14 +24,14 @@
     margin-bottom: 10px;
 }
 .calc button {
-    background: rgb(25, 50, 25);
+    background: rgb(73, 31, 97);
     color: wheat ;
     border-radius: 10px;
     padding: 5px;
 }
 
 .calc button:hover {
-    background: rgb(200, 100, 200);
+    background: rgb(211, 169, 235);
     color: rgb(0, 0, 0) ;
     border-radius: 10px;
     padding: 5px;
@@ -45,4 +45,13 @@
     border-radius: 4px;
     background: rgb(0, 0, 0);
     color: rgb(87, 247, 47);
+}
+.calcF {
+    display: none;
+}
+#input-calcFin {
+    display: none;
+}
+#input-calcFin:checked + .calc .calcF {
+    display: block;
 }
